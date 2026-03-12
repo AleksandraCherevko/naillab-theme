@@ -1,0 +1,73 @@
+/* Base reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+  font: inherit;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #111;
+  background: #fff;
+}
+
+:root {
+  --color-bg: #f4f5f0;
+  --color-text: #111;
+  --accent-color: #b3ac9c;
+  --box-shadow: 0 0 0 2px rgba(212, 180, 131, 0.6);
+  --black-background: #000;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 960px;
+    padding: 0 24px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
