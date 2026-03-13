@@ -163,6 +163,21 @@
   font-family: "Montserrat", sans-serif;
 }
 
+// filter
+
+.catalog-menu ul {
+  display: block;
+}
+
+.catalog-menu li ul {
+  display: none;
+  padding-left: 12px;
+}
+
+.catalog-menu li.open > ul {
+  display: block;
+}
+
 // Tablet and up
 @media (min-width: 768px) {
   .header-inner {
@@ -204,4 +219,206 @@
   .link-text {
     display: inline;
   }
+
+  // filter
+
+  .catalog-menu .container {
+    max-width: none;
+    width: 100%;
+    padding: 0 16px; /* оставим отступы */
+  }
+  .catalog-menu ul {
+    display: flex;
+    gap: 20px;
+  }
+
+  .catalog-menu li ul {
+    position: absolute;
+    display: none;
+  }
+
+  .catalog-menu li:hover > ul {
+    display: block;
+  }
+  .catalog-menu ul {
+    gap: 8px;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+  }
+
+  .catalog-menu a {
+    font-size: 14px;
+    letter-spacing: 0.1px;
+  }
+
+  .catalog-menu li + li::before {
+    content: "|";
+    color: #555;
+    margin-right: 8px;
+  }
+
+  .catalog-menu li {
+    position: relative;
+  }
+
+  .catalog-menu li ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #000;
+    padding: 10px 12px;
+    margin: 8px 0 0;
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 220px;
+    z-index: 20;
+  }
+
+  .catalog-menu li:hover > ul {
+    display: flex;
+  }
+
+  .catalog-menu li ul li {
+    white-space: nowrap;
+  }
+
+  .catalog-menu {
+    position: relative;
+    z-index: 50;
+  }
+
+  .catalog-menu li ul {
+    z-index: 100;
+    pointer-events: auto;
+  }
+
+  .site-header,
+  .header-search {
+    z-index: 1;
+  }
+
+  .catalog-menu {
+    position: relative;
+    z-index: 50;
+  }
+
+  .catalog-menu li {
+    position: relative;
+  }
+
+  .catalog-menu li + li::before {
+    content: "|";
+    color: #555;
+    margin-right: 8px;
+    pointer-events: none; /* важно */
+  }
+
+  .catalog-menu li ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #000;
+    padding: 10px 12px;
+    margin: 8px 0 0;
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 220px;
+    z-index: 100;
+  }
+
+  .catalog-menu li:hover > ul {
+    display: flex;
+  }
+
+  .catalog-menu li ul a {
+    display: block;
+    padding: 6px 8px;
+  }
+
+  .catalog-menu li ul::before,
+  .catalog-menu li ul li::before {
+    content: none !important;
+  }
+  .catalog-menu > ul > li + li::before {
+    content: "|";
+    color: #555;
+    margin-right: 8px;
+    pointer-events: none;
+  }
+
+  .catalog-menu {
+    position: relative;
+    z-index: 1000; /* поднимаем над остальными */
+  }
+
+  .catalog-menu ul {
+    overflow: visible;
+  }
+
+  .catalog-menu li {
+    position: relative;
+  }
+
+  .catalog-menu li ul {
+    z-index: 2000;
+    pointer-events: auto;
+  }
+
+  /* блоки ниже — наоборот ниже */
+  .header-search,
+  .smart-slider,
+  .hero,
+  .wp-block-cover,
+  .wp-block-group {
+    position: relative;
+    z-index: 1;
+  }
+  .catalog-menu li ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #000;
+    padding: 10px 12px;
+    margin: 0; /* убрать разрыв */
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 220px;
+    z-index: 2000;
+  }
+
+  .catalog-menu li:hover > ul,
+  .catalog-menu li:focus-within > ul {
+    display: flex;
+  }
+
+  .catalog-menu > ul > li.menu-item-has-children > a::after {
+  content: "▾";
+  margin-left: 6px;
+  font-size: 10px;
+  color: #888;
+}
+
+.catalog-menu li ul {
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity .2s ease, transform .2s ease;
+}
+
+.catalog-menu li:hover > ul,
+.catalog-menu li:focus-within > ul {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.catalog-menu > ul > li.menu-item-has-children > a::after {
+  content: "▼";
+  margin-left: 6px;
+  font-size: 10px;
+}
+
+
 }

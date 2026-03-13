@@ -18,6 +18,8 @@ function register_menu() {
     register_nav_menu('header_menu', 'Header Menu');
     register_nav_menu('footer_info', 'Footer Info');
     register_nav_menu('footer_service', 'Footer Service');
+    register_nav_menu('catalog_menu', 'Catalog Menu');
+
 }
 add_action('after_setup_theme', 'register_menu');
 

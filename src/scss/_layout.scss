@@ -60,7 +60,10 @@ body {
 }
 
 // filter cards on main page
-
+.home-category {
+  display: grid;
+ 
+}
 .home-category-card {
   border-radius: 12px;
   overflow: hidden;
@@ -102,6 +105,9 @@ body {
   .container {
     max-width: 960px;
     padding: 0 24px;
+  }
+  .home-category {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 

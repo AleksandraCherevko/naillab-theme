@@ -26,3 +26,16 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.target === menu) closeMenu();
   });
 });
+
+// filter menu
+
+document
+  .querySelectorAll(".catalog-menu .menu-item-has-children > a")
+  .forEach((link) => {
+    link.addEventListener("click", (e) => {
+      if (window.matchMedia("(max-width: 900px)").matches) {
+        e.preventDefault();
+        link.parentElement.classList.toggle("open");
+      }
+    });
+  });

@@ -74,12 +74,25 @@
     ?>
   </div>
 </div>
+<!-- SEARCH -->
 <div class="header-search">
   <div class="container">
     <?php the_widget('WC_Widget_Product_Search'); ?>
   </div>
 </div>
-
+<!-- FILTER -->
+<nav class="catalog-menu">
+  <div class="container">
+    <?php
+    wp_nav_menu([
+      'theme_location' => 'catalog_menu',
+      'container' => false,
+      'menu_id' => 'catalog-menu',
+      'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+    ]);
+    ?>
+  </div>
+</nav>
 
  
 </header>
