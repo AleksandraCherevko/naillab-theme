@@ -63,7 +63,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <details class="footer-accordion">
       <summary class="footer-accordion-summary">Kontakt</summary>
       <ul class="footer-contact">
-        <li><a href="mailto:naillab.cz@gmail.com">nailslab.cz@gmail.com</a></li>
+        <li><a href="mailto:nailslab.cz@gmail.com">nailslab.cz@gmail.com</a></li>
         <li><a href="tel:+420722392887">+420 722 392 887</a></li>
       </ul>
 
