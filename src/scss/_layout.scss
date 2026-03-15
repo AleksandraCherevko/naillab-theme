@@ -24,11 +24,14 @@ ol {
   list-style: none;
 }
 
-a {
+a,
+a:visited,
+a:hover,
+a:focus,
+a:focus-visible {
   color: inherit;
   text-decoration: none;
 }
-
 img {
   display: block;
   max-width: 100%;
@@ -59,7 +62,7 @@ body {
   --black-background: #000;
 }
 
-// filter cards on main page
+// FILTER CARDS
 .home-category {
   display: grid;
 }
@@ -100,7 +103,7 @@ body {
   background: hsl(0, 0%, 13%);
 }
 
-// contact us strip on main page
+// CONTACT US SECTION
 .contact-strip {
   margin-bottom: 48px;
   display: flex;
@@ -159,6 +162,7 @@ body {
 .contact-strip__socmedia {
   font-size: 18px;
   font-weight: 400;
+  color: var(--color-bg);
 }
 
 .contact-strip__soc
@@ -168,6 +172,77 @@ body {
   color: var(--color-bg);
   margin-right: 12px;
 }
+
+// INSPIRATION SECTION
+
+.insp-strip__title {
+  font-size: 24px;
+  font-weight: 700;
+}
+.insp-strip {
+  padding-top: 10px;
+  padding-bottom: 24px;
+}
+.insp-strip__list .insp-strip__item {
+  display: none;
+}
+.insp-strip__list .insp-strip__item:nth-child(-n + 2) {
+  display: block;
+}
+
+.insp-strip__list.is-open .insp-strip__item {
+  display: block;
+}
+
+.insp-strip__list {
+  display: flex;
+  flex-direction: column; /* mobile */
+  gap: 12px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.insp-strip__list .insp-strip__item .insp-strip__img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.insp-strip__toggle {
+  background-color: var(--color-text);
+  display: flex;
+  border-radius: 12px;
+  padding: 14px;
+}
+.insp-strip__btn {
+  color: var(--color-bg);
+  background-color: var(--color-text);
+  display: flex;
+  border-radius: 12px;
+  padding: 14px;
+}
+.insp-strip-btn__toggle {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.insp-strip__btn:hover,
+.insp-strip__btn:focus {
+  background-color: var(--accent-color);
+  color: var(--color-bg);
+}
+
+.insp-strip__toggle:hover,
+.insp-strip__toggle:focus {
+  background-color: var(--accent-color);
+  color: var(--color-bg);
+}
+// TABLET
+
 @media (min-width: 768px) {
   .container {
     max-width: 960px;
@@ -177,7 +252,7 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  // contact us strip on main page
+  // CONTACT US SECTION
 
   .contact-strip__inner {
     align-items: center;
@@ -195,6 +270,26 @@ body {
   .contact-strip__img {
     width: 356px;
   }
+
+  // INSPIRATION SECTION
+
+  .insp-strip__list {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .insp-strip__toggle {
+    display: none;
+  }
+  .insp-strip__item {
+    display: none;
+  }
+  .insp-strip__item:nth-child(-n + 3) {
+    display: block;
+  }
+  .insp-strip__toggle {
+    display: none;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -206,13 +301,24 @@ body {
     display: none;
   }
 
-  // contact us strip on main page
+  // CONTACT US SECTION
 
   .contact-strip__inner {
     justify-content: flex-start;
+    gap: 100px;
   }
 
   .contact-strip__img {
     width: 500px;
+  }
+
+  // INSPIRATION SECTION
+
+  .insp-strip__item {
+    display: block;
+  }
+
+  .insp-strip__item:nth-child(-n + 5) {
+    display: block;
   }
 }

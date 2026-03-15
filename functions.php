@@ -46,4 +46,12 @@ add_action('wp_enqueue_scripts', function () {
 });
 
 
+// inspiration section 
 
+wp_enqueue_script(
+  'astra-child-home',
+  get_stylesheet_directory_uri() . '/assets/js/inspire.js',
+  [],
+  null,
+  true
+);
