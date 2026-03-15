@@ -62,7 +62,6 @@ body {
 // filter cards on main page
 .home-category {
   display: grid;
- 
 }
 .home-category-card {
   border-radius: 12px;
@@ -101,6 +100,74 @@ body {
   background: hsl(0, 0%, 13%);
 }
 
+// contact us strip on main page
+.contact-strip {
+  margin-bottom: 48px;
+  display: flex;
+  padding: 48px 0;
+  background-color: var(--black-background);
+}
+
+.contact-strip__inner {
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+}
+
+.contact-strip__text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+.contact-strip__title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-bg);
+}
+.contact-strip__email {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--color-bg);
+}
+.contact-strip__phone {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.contact-strip__link {
+  color: var(--color-bg);
+  text-decoration: none;
+}
+
+.contact-strip__link:hover,
+.contact-strip__link:focus-visible {
+  color: var(--accent-color);
+  outline: none;
+}
+
+.contact-strip__link:focus-visible {
+  box-shadow: var(--box-shadow);
+  border-radius: 4px;
+}
+.contact-strip__soc {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
+.contact-strip__socmedia {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.contact-strip__soc
+  .contact-strip__socmedia
+  + .contact-strip__socmedia::before {
+  content: "|";
+  color: var(--color-bg);
+  margin-right: 12px;
+}
 @media (min-width: 768px) {
   .container {
     max-width: 960px;
@@ -108,6 +175,25 @@ body {
   }
   .home-category {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  // contact us strip on main page
+
+  .contact-strip__inner {
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+  }
+
+  .contact-strip__text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .contact-strip__img {
+    width: 356px;
   }
 }
 
@@ -118,5 +204,15 @@ body {
 
   .home-category-card-desktop {
     display: none;
+  }
+
+  // contact us strip on main page
+
+  .contact-strip__inner {
+    justify-content: flex-start;
+  }
+
+  .contact-strip__img {
+    width: 500px;
   }
 }

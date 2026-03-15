@@ -219,14 +219,10 @@
   .link-text {
     display: inline;
   }
+}
 
+@media (min-width: 1200px) {
   // filter
-
-  .catalog-menu .container {
-    max-width: none;
-    width: 100%;
-    padding: 0 16px; /* оставим отступы */
-  }
   .catalog-menu ul {
     display: flex;
     gap: 20px;
@@ -395,30 +391,30 @@
   }
 
   .catalog-menu > ul > li.menu-item-has-children > a::after {
-  content: "▾";
-  margin-left: 6px;
-  font-size: 10px;
-  color: #888;
-}
+    content: "▾";
+    margin-left: 6px;
+    font-size: 10px;
+    color: #888;
+  }
 
-.catalog-menu li ul {
-  opacity: 0;
-  transform: translateY(6px);
-  transition: opacity .2s ease, transform .2s ease;
-}
+  .catalog-menu li ul {
+    opacity: 0;
+    transform: translateY(6px);
+    transition:
+      opacity 0.2s ease,
+      transform 0.2s ease;
+  }
 
-.catalog-menu li:hover > ul,
-.catalog-menu li:focus-within > ul {
-  display: flex;
-  opacity: 1;
-  transform: translateY(0);
-}
+  .catalog-menu li:hover > ul,
+  .catalog-menu li:focus-within > ul {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+  }
 
-.catalog-menu > ul > li.menu-item-has-children > a::after {
-  content: "▼";
-  margin-left: 6px;
-  font-size: 10px;
-}
-
-
+  .catalog-menu > ul > li.menu-item-has-children > a::after {
+    content: "▼";
+    margin-left: 6px;
+    font-size: 10px;
+  }
 }
