@@ -177,6 +177,10 @@
 .catalog-menu li.open > ul {
   display: block;
 }
+.catalog-menu {
+  position: relative;
+  z-index: 2000; /* выше hero */
+}
 
 // Tablet and up
 @media (min-width: 768px) {

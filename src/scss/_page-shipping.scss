@@ -1,0 +1,87 @@
+.terms-page {
+  padding: 24px 0 48px;
+}
+
+.terms-hero {
+  position: relative;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.terms-hero img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+}
+
+.terms-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.terms-hero .container {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  color: var(--color-bg);
+}
+
+.terms-hero-title {
+  font-size: 28px;
+  margin: 0 0 6px;
+  color: var(--color-text);
+}
+
+.terms-hero-after-title {
+  color: var(--color-text);
+}
+
+.terms-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.terms-content h2 {
+  margin: 24px 0 8px;
+  font-size: 20px;
+}
+
+.terms-content p {
+  margin: 8px 0;
+}
+
+.terms-content ul {
+  margin: 8px 0 12px;
+  padding-left: 18px;
+}
+
+.terms-content li {
+  position: relative;
+  padding-left: 22px;
+  margin: 4px 0;
+}
+
+.terms-content li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--accent-color);
+  font-size: 12px;
+}
+@media (min-width: 768px) {
+  .terms-hero h1 {
+    font-size: 36px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .terms-hero h1 {
+    font-size: 40px;
+  }
+}
