@@ -13,6 +13,23 @@ get_header(); ?>
 
   <?php astra_content_page_loop(); ?>
 
+    <!-- HOME PRODUCTS -->
+  <section class="home-products container catalog-block--novinky">
+    <h2 class="home-products__title">Novinky</h2>
+    <?php echo do_shortcode('[products limit="4" orderby="date" order="DESC"]'); ?>
+  </section>
+
+  <section class="catalog-block container catalog-block--novinky">
+  <h2 class="home-products__title">Akce</h2>
+  <?php echo do_shortcode('[sale_products limit="4"]'); ?>
+</section>
+
+  <section class="home-products container catalog-block--novinky">
+    <h2 class="home-products__title">Nejprodávanější</h2>
+    <?php echo do_shortcode('[best_selling_products limit="4"]'); ?>
+  </section>
+
+
   <!-- CONTACT SECTION -->
   <section class="contact-strip">
     <div class="container contact-strip__inner">
@@ -27,6 +44,7 @@ get_header(); ?>
        <div class="contact-strip__soc">
             <p class="contact-strip__socmedia"><a class="contact-strip__link" href="https://www.instagram.com/naillab.cz/" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a></p>
             <p class="contact-strip__socmedia"><a  class="contact-strip__link"href="https://t.me/+0Di5fohdymU0ZTJi" target="_blank" rel="noopener" aria-label="Telegram">Telegram</a></p>
+            <p class="contact-strip__socmedia"><a  class="contact-strip__link"href="https://www.facebook.com/naillab.cz" target="_blank" rel="noopener" aria-label="Facebook">Facebook</a></p>
        </div>
       </div>
     </div>

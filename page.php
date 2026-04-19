@@ -52,6 +52,11 @@ if ( is_page('odstoupeni-od-smlouvy') ) {
   return;
 }
 
+if ( is_page('katalog') ) {
+  get_template_part('page', 'katalog');
+  return;
+}
+
 get_header(); ?>
 
 <?php if ( astra_page_layout() === 'left-sidebar' ) { ?>

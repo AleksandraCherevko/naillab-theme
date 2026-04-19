@@ -78,6 +78,11 @@ if ( ! defined( 'ABSPATH' ) ) {
             <use href="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/symbol-defs.svg#icon-telegram'); ?>"></use>
           </svg>
         </a>
+        <a href="https://www.facebook.com/naillab.cz" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg class="icon" width="20" height="20" aria-hidden="true">
+            <use href="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/symbol-defs.svg#icon-facebook'); ?>"></use>
+          </svg>
+        </a>
       </div>
     </details>
 

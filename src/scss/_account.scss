@@ -1,0 +1,506 @@
+/* My account / login-register */
+body.woocommerce-account .site-main {
+  padding: 24px 0 48px;
+}
+
+body.woocommerce-account article.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+body.woocommerce-account .entry-header {
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+body.woocommerce-account .entry-title {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--color-text);
+}
+
+body.woocommerce-account .entry-content > .woocommerce {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+body.woocommerce-account .woocommerce-notices-wrapper {
+  margin-bottom: 20px;
+}
+
+/* Login / register layout */
+body.woocommerce-account #customer_login {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+body.woocommerce-account #customer_login .u-column1,
+body.woocommerce-account #customer_login .u-column2,
+body.woocommerce-account #customer_login .col-1,
+body.woocommerce-account #customer_login .col-2 {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 20px;
+  float: none;
+  border: 1px solid #eee;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+}
+
+body.woocommerce-account #customer_login h2 {
+  margin: 0 0 16px;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+body.woocommerce-account .woocommerce-form {
+  margin: 0;
+}
+
+body.woocommerce-account .woocommerce-form-row,
+body.woocommerce-account .form-row {
+  margin-bottom: 14px;
+}
+
+body.woocommerce-account label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--color-text);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+body.woocommerce-account input.input-text,
+body.woocommerce-account input[type="text"],
+body.woocommerce-account input[type="email"],
+body.woocommerce-account input[type="password"],
+body.woocommerce-account textarea,
+body.woocommerce-account select {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  color: var(--color-text);
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+body.woocommerce-account input.input-text:focus,
+body.woocommerce-account input[type="text"]:focus,
+body.woocommerce-account input[type="email"]:focus,
+body.woocommerce-account input[type="password"]:focus,
+body.woocommerce-account textarea:focus,
+body.woocommerce-account select:focus {
+  border-color: var(--accent-color);
+  outline: none;
+  box-shadow: var(--box-shadow);
+}
+
+body.woocommerce-account .password-input {
+  display: block;
+  width: 100%;
+}
+
+body.woocommerce-account .password-input input {
+  width: 100%;
+}
+
+body.woocommerce-account .woocommerce-form-login__rememberme,
+body.woocommerce-account .woocommerce-form__label-for-checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+body.woocommerce-account .woocommerce-form-login__rememberme input,
+body.woocommerce-account .woocommerce-form__label-for-checkbox input {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  accent-color: #000;
+}
+
+/* Buttons */
+body.woocommerce-account .entry-content .woocommerce .button,
+body.woocommerce-account .entry-content .woocommerce button.button,
+body.woocommerce-account .entry-content .woocommerce input.button,
+body.woocommerce-account .entry-content .woocommerce .woocommerce-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 8px;
+  background: #000;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  box-shadow: none;
+}
+
+body.woocommerce-account .entry-content .woocommerce .button:hover,
+body.woocommerce-account .entry-content .woocommerce .button:focus-visible,
+body.woocommerce-account .entry-content .woocommerce button.button:hover,
+body.woocommerce-account
+  .entry-content
+  .woocommerce
+  button.button:focus-visible,
+body.woocommerce-account .entry-content .woocommerce input.button:hover,
+body.woocommerce-account .entry-content .woocommerce input.button:focus-visible,
+body.woocommerce-account .entry-content .woocommerce .woocommerce-button:hover,
+body.woocommerce-account
+  .entry-content
+  .woocommerce
+  .woocommerce-button:focus-visible {
+  background: var(--accent-color);
+  color: #000;
+  outline: none;
+}
+
+body.woocommerce-account .lost_password {
+  margin-top: 12px;
+}
+
+body.woocommerce-account .lost_password a,
+body.woocommerce-account .woocommerce-privacy-policy-text a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+body.woocommerce-account .lost_password a:hover,
+body.woocommerce-account .lost_password a:focus-visible,
+body.woocommerce-account .woocommerce-privacy-policy-text a:hover,
+body.woocommerce-account .woocommerce-privacy-policy-text a:focus-visible {
+  color: var(--accent-color);
+  outline: none;
+}
+
+body.woocommerce-account .woocommerce-privacy-policy-text {
+  margin: 12px 0 16px;
+}
+
+body.woocommerce-account .woocommerce-privacy-policy-text p {
+  color: var(--color-text);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+body.woocommerce-account #customer_login {
+  align-items: stretch;
+}
+
+body.woocommerce-account #customer_login::before,
+body.woocommerce-account #customer_login::after {
+  content: none;
+  display: none;
+}
+
+body.woocommerce-account #customer_login .u-column1,
+body.woocommerce-account #customer_login .u-column2,
+body.woocommerce-account #customer_login .col-1,
+body.woocommerce-account #customer_login .col-2 {
+  align-self: stretch;
+}
+
+body.woocommerce-account span.password-input {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+body.woocommerce-account span.password-input .show-password-input::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url("/wp-content/themes/astra-child/assets/images/eye-off.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+body.woocommerce-account
+  span.password-input
+  .show-password-input.display-password::before {
+  background-image: url("/wp-content/themes/astra-child/assets/images/eye-on.svg");
+}
+
+body.woocommerce-account span.password-input .show-password-input::after {
+  content: none;
+  display: none;
+}
+
+body.woocommerce-account span.password-input .show-password-input:hover,
+body.woocommerce-account span.password-input .show-password-input:focus,
+body.woocommerce-account span.password-input .show-password-input:focus-visible,
+body.woocommerce-account span.password-input .show-password-input:active {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  outline: none;
+}
+body.woocommerce-account span.password-input {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+body.woocommerce-account span.password-input input {
+  width: 100%;
+  padding-right: 48px;
+}
+
+body.woocommerce-account span.password-input .show-password-input {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  z-index: 20;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  min-width: 22px;
+  min-height: 22px;
+  margin-top: 10px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: transparent;
+  font-size: 0;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: none;
+  transform: translateY(-50%);
+  appearance: none;
+}
+
+@media (min-width: 768px) {
+  body.woocommerce-account article.page {
+    padding: 0 24px;
+  }
+
+  body.woocommerce-account .entry-title {
+    font-size: 34px;
+  }
+}
+
+@media (min-width: 1200px) {
+  body.woocommerce-account .entry-title {
+    font-size: 40px;
+  }
+
+  body.woocommerce-account #customer_login {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px;
+    align-items: start;
+  }
+
+  body.woocommerce-account .col2-set#customer_login {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px;
+    align-items: start;
+  }
+
+  body.woocommerce-account .col2-set#customer_login .col-1,
+  body.woocommerce-account .col2-set#customer_login .col-2,
+  body.woocommerce-account .col2-set#customer_login .u-column1,
+  body.woocommerce-account .col2-set#customer_login .u-column2 {
+    width: 100%;
+    margin: 0;
+    float: none;
+  }
+}
+
+/* Logged-in account */
+body.woocommerce-account .woocommerce-MyAccount-navigation,
+body.woocommerce-account .woocommerce-MyAccount-content {
+  width: 100%;
+  float: none;
+}
+
+body.woocommerce-account .woocommerce-MyAccount-navigation {
+  margin-bottom: 24px;
+}
+
+body.woocommerce-account .woocommerce-MyAccount-navigation ul {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body.woocommerce-account .woocommerce-MyAccount-navigation ul li {
+  margin: 0;
+}
+
+body.woocommerce-account .woocommerce-MyAccount-navigation ul li a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 10px 14px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  background: #fff;
+  color: var(--color-text);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+body.woocommerce-account .woocommerce-MyAccount-navigation ul li a:hover,
+body.woocommerce-account
+  .woocommerce-MyAccount-navigation
+  ul
+  li
+  a:focus-visible {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  color: #000;
+  outline: none;
+}
+
+body.woocommerce-account .woocommerce-MyAccount-navigation ul li.is-active a {
+  background: #000;
+  border-color: #000;
+  color: #fff;
+}
+
+body.woocommerce-account .woocommerce-MyAccount-content {
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
+}
+
+body.woocommerce-account .woocommerce-MyAccount-content p,
+body.woocommerce-account .woocommerce-MyAccount-content li,
+body.woocommerce-account .woocommerce-MyAccount-content address {
+  color: var(--color-text);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+body.woocommerce-account .woocommerce-MyAccount-content h2,
+body.woocommerce-account .woocommerce-MyAccount-content h3 {
+  margin: 0 0 16px;
+  color: var(--color-text);
+  font-size: 22px;
+  font-weight: 600;
+}
+
+body.woocommerce-account .woocommerce-MyAccount-content table.shop_table {
+  width: 100%;
+  border: 0;
+  border-collapse: collapse;
+}
+
+body.woocommerce-account .woocommerce-MyAccount-content table.shop_table th,
+body.woocommerce-account .woocommerce-MyAccount-content table.shop_table td {
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+  color: var(--color-text);
+}
+
+body.woocommerce-account .woocommerce-MyAccount-content table.shop_table th {
+  color: #666;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+body.woocommerce-account .woocommerce-Addresses {
+  display: grid;
+  gap: 20px;
+}
+
+body.woocommerce-account .woocommerce-Address {
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 16px;
+  background: #fafafa;
+}
+
+body.woocommerce-account .woocommerce-Address-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+body.woocommerce-account .woocommerce-Address-title .edit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: #000;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+body.woocommerce-account .woocommerce-Address-title .edit:hover,
+body.woocommerce-account .woocommerce-Address-title .edit:focus-visible {
+  background: var(--accent-color);
+  color: #000;
+  outline: none;
+}
+
+@media (min-width: 768px) {
+  body.woocommerce-account .woocommerce-MyAccount-navigation ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  body.woocommerce-account .woocommerce-Addresses {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1200px) {
+  body.woocommerce-account
+    .entry-content
+    > .woocommerce:has(.woocommerce-MyAccount-navigation) {
+    display: grid;
+    grid-template-columns: 280px minmax(0, 1fr);
+    gap: 32px;
+    align-items: start;
+  }
+
+  body.woocommerce-account .woocommerce-MyAccount-navigation {
+    margin-bottom: 0;
+  }
+
+  body.woocommerce-account .woocommerce-MyAccount-navigation ul {
+    grid-template-columns: 1fr;
+  }
+}
