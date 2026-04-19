@@ -33,7 +33,7 @@ document
   .querySelectorAll(".catalog-menu .menu-item-has-children > a")
   .forEach((link) => {
     link.addEventListener("click", (e) => {
-      if (window.matchMedia("(max-width: 900px)").matches) {
+      if (window.matchMedia("(max-width: 1199px)").matches) {
         e.preventDefault();
         link.parentElement.classList.toggle("open");
       }

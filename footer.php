@@ -61,7 +61,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
   <div class="footer-col">
     <details class="footer-accordion">
-      <summary class="footer-accordion-summary">Kontakt</summary>
+      <summary class="footer-accordion-summary">Kontakty</summary>
       <ul class="footer-contact">
         <li><a href="mailto:nailslab.cz@gmail.com">nailslab.cz@gmail.com</a></li>
         <li><a href="tel:+420722392887">+420 722 392 887</a></li>
@@ -76,6 +76,11 @@ if ( ! defined( 'ABSPATH' ) ) {
         <a href="https://t.me/+0Di5fohdymU0ZTJi" target="_blank" rel="noopener" aria-label="Telegram">
           <svg class="icon" width="20" height="20" aria-hidden="true">
             <use href="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/symbol-defs.svg#icon-telegram'); ?>"></use>
+          </svg>
+        </a>
+        <a href="https://www.facebook.com/naillab.cz" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg class="icon" width="20" height="20" aria-hidden="true">
+            <use href="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/symbol-defs.svg#icon-facebook'); ?>"></use>
           </svg>
         </a>
       </div>

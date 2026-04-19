@@ -8,8 +8,8 @@ get_header(); ?>
 
 <main class="about-page">
   <section class="about-hero">
-    <img class="about-hero-img" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/hero.png'); ?>" alt="O nás">
-    <div class="about-hero__text">
+    <img class="about-hero-img" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/hero.jpg'); ?>" alt="O nás">
+    <div class="container">
       <h1 class="about-hero__title">O nás</h1>
       <p class="about-hero__after-title">Váš partner pro profesionální manikúru</p>
     </div>
@@ -36,11 +36,11 @@ get_header(); ?>
   <section class="about-section">
     <h2 class="about-story__title">Co u nás najdete</h2>
     <ul class="about-list">
-      <li>gel laky v různých odstínech</li>
-      <li>báze a topy</li>
-      <li>produkty pro modeláž a zpevnění nehtů</li>
-      <li>materiály pro nail art</li>
-      <li>nástroje a pomocné tekutiny</li>
+      <li class="about-list-item">gel laky v různých odstínech</li>
+      <li class="about-list-item">báze a topy</li>
+      <li class="about-list-item">produkty pro modeláž a zpevnění nehtů</li>
+      <li class="about-list-item">materiály pro nail art</li>
+      <li class="about-list-item">nástroje a pomocné tekutiny</li>
     </ul>
     <p>Naším cílem je nabídnout produkty, které splňují požadavky moderních nehtových studií.</p>
   </section>
@@ -69,10 +69,10 @@ get_header(); ?>
   <section class="about-gallery">
     <div class="container">
       <div class="about-gallery__grid">
-        <img class="about-gallery__grid-img" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/about-1.jpg'); ?>" alt="">
-        <img class="about-gallery__grid-img" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/about-2.jpg'); ?>" alt="">
-        <img class="about-gallery__grid-img" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/about-3.jpg'); ?>" alt="">
-        <img class="about-gallery__grid-img" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/about-4.jpg'); ?>" alt="">
+        <img class="about-gallery__grid-img" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/about-1.jpg'); ?>" alt="Woman holding a professional pedicure cosmetics set">
+        <img class="about-gallery__grid-img" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/about-2.jpg'); ?>" alt="Gloved hand spraying pedicure disinfectant">
+        <img class="about-gallery__grid-img" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/about-3.jpg'); ?>" alt="Nail prep liquid applied to a natural nail">
+        <img class="about-gallery__grid-img" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/about-4.jpg'); ?>" alt="Professional cuticle remover held by a woman">
       </div>
     </div>
   </section>
@@ -87,16 +87,26 @@ get_header(); ?>
     </div>
   </section>
 
-  <section class="about-section">
-    <h2>Sídlo společnosti a fakturační údaje</h2>
-    <p>Anastasiia Nedosichenko</p>
-    <p>Lesní 534,</p>
-    <p>289 24, Milovice - Mladá</p>
-    <p>IČO: 19254067</p>
-    <p><a href="mailto:nailslab.cz@gmail.com">📧 nailslab.cz@gmail.com</a></p>
-    <p><a a href="tel:+420722392887">📞 +420 722 392 887</a></p>
-    <p>Rádi vám pomůžeme.</p>
-  </section>
+  <section class="about-section about-legal">
+ <p><strong>Provozovatel e‑shopu:</strong></p>
+   
+   <p>Název společnosti / jméno podnikatele: <strong>Anastasiia Nedosichenko</strong></p>
+      <p>Sídlo / adresa podnikání: <strong>Lesní 534, 289 24, Milovice - Mladá</strong></p>
+      <p>IČO: <strong>19254067</strong></p>
+      <p>Email: <strong>nailslab.cz@gmail.com</strong></p>
+      <p>Telefon: <strong>+420 722 392 887</strong></p>
+
+  <p class="about-legal__more">Více informací najdete zde:</p>
+  <ul class="about-legal__links">
+    <li><a href="/obchodni-podminky/">Obchodní podmínky</a></li>
+    <li><a href="/reklamacni-rad/">Reklamační řád</a></li>
+    <li><a href="/doprava-a-platba/">Doprava a platba</a></li>
+      <li><a href="/odstoupeni-od-smlouvy/">Odstoupení od smlouvy</a></li>
+    <li><a href="/ochrana-osobnich-udaju/">Ochrana osobních údajů</a></li>
+  
+  </ul>
+</section>
+
 </main>
 
 <?php get_footer(); ?>

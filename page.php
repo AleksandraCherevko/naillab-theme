@@ -21,6 +21,42 @@ if ( is_page('o-nas') ) {
   get_template_part('page', 'about');
   return;
 }
+
+
+if ( is_page('kontakty') ) {
+  get_template_part('page', 'contact');
+  return;
+}
+
+if ( is_page('obchodni-podminky') ) {
+  get_template_part('page', 'terms');
+  return;
+}
+
+if ( is_page('reklamacni-rad') ) {
+  get_template_part('page', 'complaints');
+  return;
+}
+
+if ( is_page('doprava-a-platba') ) {
+  get_template_part('page', 'shipping');
+  return;
+}
+
+if ( is_page('ochrana-osobnich-udaju') ) {
+  get_template_part('page', 'privacy');
+  return;
+}
+if ( is_page('odstoupeni-od-smlouvy') ) {
+  get_template_part('page', 'withdrawal');
+  return;
+}
+
+if ( is_page('katalog') ) {
+  get_template_part('page', 'katalog');
+  return;
+}
+
 get_header(); ?>
 
 <?php if ( astra_page_layout() === 'left-sidebar' ) { ?>

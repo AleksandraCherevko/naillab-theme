@@ -27,6 +27,7 @@
       'container' => false,
       'menu_id' => 'header-menu',
       'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+        'fallback_cb' => false,
     ]);
     ?>
   </nav>
@@ -70,6 +71,7 @@
       'container' => false,
       'menu_id' => 'mobile-menu-list',
       'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+      
     ]);
     ?>
   </div>
@@ -77,9 +79,10 @@
 <!-- SEARCH -->
 <div class="header-search">
   <div class="container">
-    <?php the_widget('WC_Widget_Product_Search'); ?>
+    <?php get_product_search_form(); ?>
   </div>
 </div>
+
 <!-- FILTER -->
 <nav class="catalog-menu">
   <div class="container">
@@ -89,10 +92,12 @@
       'container' => false,
       'menu_id' => 'catalog-menu',
       'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+      'fallback_cb' => false,
     ]);
     ?>
   </div>
 </nav>
+
 
  
 </header>
