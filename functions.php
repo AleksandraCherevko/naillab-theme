@@ -212,22 +212,9 @@ add_filter('gettext', function ($translated, $text, $domain) {
     return $translated;
 }, 20, 3);
 
-// account page translation
-add_filter('gettext', function ($translated, $text, $domain) {
-    if ($text === 'Dashboard' || $text === 'Nástěnka') {
-        return 'Můj účet';
-    }
 
-    return $translated;
-}, 20, 3);
 
-add_filter('woocommerce_account_menu_items', function ($items) {
-    if (isset($items['dashboard'])) {
-        $items['dashboard'] = 'Můj účet';
-    }
 
-    return $items;
-});
 
 // remove downloads from account menu
 add_filter('woocommerce_account_menu_items', function ($items) {
@@ -236,4 +223,48 @@ add_filter('woocommerce_account_menu_items', function ($items) {
     return $items;
 }, 20);
 
+add_filter('woocommerce_account_menu_items', function ($items) {
+    if (isset($items['dashboard'])) {
+        $items['dashboard'] = 'Můj účet';
+    }
 
+    if (isset($items['downloads'])) {
+        unset($items['downloads']);
+    }
+
+    return $items;
+}, 20);
+
+// customize my account dashboard text
+add_filter('woocommerce_get_privacy_policy_text', function ($text, $type) {
+    if ($type === 'registration') {
+        return 'Vaše osobní údaje budou použity k podpoře vašeho používání tohoto webu, ke správě přístupu k vašemu účtu a k dalším účelům popsaným v našich <a href="' . esc_url(get_privacy_policy_url()) . '" class="woocommerce-privacy-policy-link" target="_blank">zásadách ochrany osobních údajů</a>.';
+    }
+
+    return $text;
+}, 20, 2);
+
+
+//  customize my account dashboard text btn
+add_filter('gettext', function ($translated, $text, $domain) {
+    if ($translated === 'Upravit Fakturační adresa' || $translated === 'Upravit Doručovací adresa') {
+        return 'Upravit';
+    }
+
+    return $translated;
+}, 20, 3);
+
+
+
+// custom my account dashboard script
+add_action('wp_enqueue_scripts', function () {
+    if (is_account_page()) {
+        wp_enqueue_script(
+            'astra-child-account',
+            get_stylesheet_directory_uri() . '/assets/js/account.js',
+            [],
+            filemtime(get_stylesheet_directory() . '/assets/js/account.js'),
+            true
+        );
+    }
+});
