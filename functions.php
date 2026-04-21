@@ -268,3 +268,56 @@ add_action('wp_enqueue_scripts', function () {
         );
     }
 });
+
+
+add_filter('woocommerce_checkout_fields', function ($fields) {
+    if (isset($fields['billing']['billing_phone'])) {
+        $fields['billing']['billing_phone']['required'] = true;
+    }
+
+    if (isset($fields['billing']['billing_first_name'])) {
+        $fields['billing']['billing_first_name']['required'] = true;
+    }
+
+    if (isset($fields['billing']['billing_last_name'])) {
+        $fields['billing']['billing_last_name']['required'] = true;
+    }
+
+    return $fields;
+});
+
+
+// Checkout labels and required phone
+add_filter('woocommerce_default_address_fields', function ($fields) {
+    if (isset($fields['first_name'])) {
+        $fields['first_name']['label'] = 'Jméno';
+    }
+
+    return $fields;
+});
+
+add_filter('woocommerce_billing_fields', function ($fields) {
+    if (isset($fields['billing_first_name'])) {
+        $fields['billing_first_name']['label'] = 'Jméno';
+    }
+
+    if (isset($fields['billing_phone'])) {
+        $fields['billing_phone']['label'] = 'Telefon';
+        $fields['billing_phone']['required'] = true;
+    }
+
+    return $fields;
+});
+
+add_filter('woocommerce_shipping_fields', function ($fields) {
+    if (isset($fields['shipping_first_name'])) {
+        $fields['shipping_first_name']['label'] = 'Jméno';
+    }
+
+    if (isset($fields['shipping_phone'])) {
+        $fields['shipping_phone']['label'] = 'Telefon';
+        $fields['shipping_phone']['required'] = true;
+    }
+
+    return $fields;
+});
