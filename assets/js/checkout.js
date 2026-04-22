@@ -8,6 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
       .normalize("NFD")
       .replace(/[\u0300-\u036f]/g, "");
 
+  const checkoutText = (element) => element.textContent || "";
+
   const shippingNotes = [
     {
       keywords: ["doruceni na vydejni misto", "z-box"],
@@ -53,8 +55,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
   };
-
-  const checkoutText = (element) => element.textContent || "";
 
   const replaceNoticeText = () => {
     document
@@ -247,6 +247,73 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
+  const updateShippingFieldRequirements = () => {
+    const isPickup = document.body.classList.contains(
+      "checkout-pickup-selected",
+    );
+
+    const isHomeDelivery = document.body.classList.contains(
+      "checkout-home-delivery-selected",
+    );
+
+    const recipientFields = [
+      "#shipping-first_name",
+      "#shipping-last_name",
+      "#shipping-phone",
+    ];
+
+    const addressFields = [
+      "#shipping-country",
+      "#shipping-address_1",
+      "#shipping-address_2",
+      "#shipping-city",
+      "#shipping-postcode",
+    ];
+
+    recipientFields.forEach((selector) => {
+      const field = document.querySelector(selector);
+
+      if (!field) return;
+
+      field.disabled = false;
+      field.required = true;
+      field.setAttribute("required", "required");
+      field.setAttribute("aria-required", "true");
+      field.removeAttribute("aria-invalid");
+    });
+
+    addressFields.forEach((selector) => {
+      const field = document.querySelector(selector);
+
+      if (!field) return;
+
+      if (isPickup) {
+        field.disabled = true;
+        field.required = false;
+        field.removeAttribute("required");
+        field.removeAttribute("aria-required");
+        field.removeAttribute("aria-invalid");
+        return;
+      }
+
+      if (isHomeDelivery) {
+        field.disabled = false;
+
+        if (selector !== "#shipping-address_2") {
+          field.required = true;
+          field.setAttribute("required", "required");
+          field.setAttribute("aria-required", "true");
+        }
+
+        if (selector === "#shipping-address_2") {
+          field.required = false;
+          field.removeAttribute("required");
+          field.removeAttribute("aria-required");
+        }
+      }
+    });
+  };
+
   const replaceShippingAddressTitle = () => {
     const title = document.querySelector(
       "#shipping-fields .wc-block-components-title",
@@ -264,6 +331,7 @@ document.addEventListener("DOMContentLoaded", () => {
       title.textContent = titleText;
     }
   };
+
   const translatePacketaButton = () => {
     document
       .querySelectorAll(".packeta-widget-button a, .packetery-widget-button a")
@@ -280,6 +348,7 @@ document.addEventListener("DOMContentLoaded", () => {
     replaceCheckoutFieldLabels();
     addShippingNotes();
     updateShippingAddressMode();
+    updateShippingFieldRequirements();
     replaceShippingAddressTitle();
     translatePacketaButton();
   };
