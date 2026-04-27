@@ -2037,6 +2037,143 @@ body.woocommerce-account
   display: none;
 }
 
+body.woocommerce-account .woocommerce-message,
+body.woocommerce-account .woocommerce-info,
+body.woocommerce-account .woocommerce-error {
+  margin: 0 0 20px;
+  padding: 18px 20px;
+  border: 1px solid #e7e3d8;
+  border-radius: 16px;
+  background: #fff;
+  color: var(--color-text);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
+}
+
+body.woocommerce-account .woocommerce-message::before,
+body.woocommerce-account .woocommerce-info::before,
+body.woocommerce-account .woocommerce-error::before,
+body.woocommerce-account .woocommerce-message::after,
+body.woocommerce-account .woocommerce-info::after,
+body.woocommerce-account .woocommerce-error::after {
+  content: none;
+  display: none;
+}
+
+body.woocommerce-account .woocommerce-message {
+  border-color: var(--accent-color);
+}
+
+body.woocommerce-account .woocommerce-error {
+  border-color: #d86b6b;
+}
+
+body.woocommerce-account .woocommerce-message,
+body.woocommerce-account .woocommerce-info,
+body.woocommerce-account .woocommerce-error {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+body.woocommerce-account .woocommerce-message a,
+body.woocommerce-account .woocommerce-info a,
+body.woocommerce-account .woocommerce-error a {
+  color: var(--color-text);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+body.woocommerce-account .woocommerce-message a:hover,
+body.woocommerce-account .woocommerce-message a:focus-visible,
+body.woocommerce-account .woocommerce-info a:hover,
+body.woocommerce-account .woocommerce-info a:focus-visible,
+body.woocommerce-account .woocommerce-error a:hover,
+body.woocommerce-account .woocommerce-error a:focus-visible {
+  color: var(--accent-color);
+  outline: none;
+}
+body.woocommerce-account.woocommerce-lost-password .woocommerce {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+body.woocommerce-account.woocommerce-lost-password .woocommerce-message,
+body.woocommerce-account.woocommerce-lost-password .woocommerce-info,
+body.woocommerce-account.woocommerce-lost-password .woocommerce-error {
+  text-align: center;
+}
+body.woocommerce-account input.input-text,
+body.woocommerce-account input[type="text"],
+body.woocommerce-account input[type="email"],
+body.woocommerce-account input[type="password"],
+body.woocommerce-account textarea,
+body.woocommerce-account select {
+  box-shadow: none;
+}
+
+body.woocommerce-account input.input-text:focus,
+body.woocommerce-account input.input-text:focus-visible,
+body.woocommerce-account input[type="text"]:focus,
+body.woocommerce-account input[type="text"]:focus-visible,
+body.woocommerce-account input[type="email"]:focus,
+body.woocommerce-account input[type="email"]:focus-visible,
+body.woocommerce-account input[type="password"]:focus,
+body.woocommerce-account input[type="password"]:focus-visible,
+body.woocommerce-account textarea:focus,
+body.woocommerce-account textarea:focus-visible,
+body.woocommerce-account select:focus,
+body.woocommerce-account select:focus-visible {
+  border-color: var(--accent-color);
+  outline: none;
+  box-shadow: var(--box-shadow);
+}
+
+body.woocommerce-account input:-webkit-autofill,
+body.woocommerce-account input:-webkit-autofill:hover,
+body.woocommerce-account input:-webkit-autofill:focus,
+body.woocommerce-account input:-webkit-autofill:focus-visible,
+body.woocommerce-account textarea:-webkit-autofill,
+body.woocommerce-account textarea:-webkit-autofill:hover,
+body.woocommerce-account textarea:-webkit-autofill:focus,
+body.woocommerce-account select:-webkit-autofill,
+body.woocommerce-account select:-webkit-autofill:hover,
+body.woocommerce-account select:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--color-text);
+  -webkit-box-shadow:
+    0 0 0 1000px #fff inset,
+    0 0 0 2px rgba(179, 172, 156, 0.6);
+  box-shadow:
+    0 0 0 1000px #fff inset,
+    0 0 0 2px rgba(179, 172, 156, 0.6);
+  border-color: var(--accent-color);
+  transition: background-color 9999s ease-in-out 0s;
+}
+body.woocommerce-account .woocommerce-message:focus,
+body.woocommerce-account .woocommerce-info:focus,
+body.woocommerce-account .woocommerce-error:focus {
+  outline: none;
+  box-shadow: none;
+}
+body.woocommerce-account .woocommerce-info,
+body.woocommerce-account .woocommerce-message,
+body.woocommerce-account .woocommerce-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+body.woocommerce-account .woocommerce-info .button,
+body.woocommerce-account .woocommerce-info .wc-forward,
+body.woocommerce-account .woocommerce-message .button,
+body.woocommerce-account .woocommerce-message .wc-forward,
+body.woocommerce-account .woocommerce-error .button,
+body.woocommerce-account .woocommerce-error .wc-forward {
+  margin-top: 14px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 /* Tablet */
 @media (min-width: 768px) {
   body.woocommerce-account article.page {

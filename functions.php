@@ -290,3 +290,66 @@ add_filter('woocommerce_shipping_fields', function ($fields) {
 
     return $fields;
 });
+
+// 404 error page
+add_action('template_redirect', function () {
+    if (is_admin()) {
+        return;
+    }
+
+    if (!function_exists('wc_get_page_permalink') || !function_exists('is_account_page')) {
+        return;
+    }
+
+    if (!is_account_page()) {
+        return;
+    }
+
+    global $wp;
+
+    $request_path = trim((string) ($wp->request ?? ''), '/');
+    $account_path = trim((string) parse_url(wc_get_page_permalink('myaccount'), PHP_URL_PATH), '/');
+
+    if ($request_path === '' || $account_path === '' || $request_path === $account_path) {
+        return;
+    }
+
+    if (strpos($request_path, $account_path . '/') !== 0) {
+        return;
+    }
+
+    $subpath = trim(substr($request_path, strlen($account_path)), '/');
+
+    if ($subpath === '') {
+        return;
+    }
+
+    $first_segment = strtok($subpath, '/');
+
+    $allowed_endpoints = [
+        'orders',
+        'view-order',
+        'downloads',
+        'edit-account',
+        'edit-address',
+        'payment-methods',
+        'add-payment-method',
+        'delete-payment-method',
+        'set-default-payment-method',
+        'lost-password',
+        'customer-logout',
+    ];
+
+    if (in_array($first_segment, $allowed_endpoints, true)) {
+        return;
+    }
+
+    global $wp_query;
+
+    $wp_query->set_404();
+    status_header(404);
+    nocache_headers();
+
+    include get_query_template('404');
+    exit;
+});

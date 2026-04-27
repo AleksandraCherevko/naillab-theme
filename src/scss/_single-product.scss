@@ -584,6 +584,14 @@ body.single-product
   text-decoration: underline;
 }
 
+body.single-product .product_meta a:hover,
+body.single-product .product_meta a:focus-visible {
+  color: var(--accent-color);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  outline: none;
+}
+
 @media (min-width: 768px) {
   body.single-product .site-main {
     padding: 32px 0 56px;
