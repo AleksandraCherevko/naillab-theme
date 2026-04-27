@@ -53,7 +53,7 @@ function naillab_render_catalog_section($title, $category_slug) {
 ?>
  <main class="catalog-page">
   <?php naillab_render_catalog_section('Gel laky', 'gel-laky'); ?>
-  <?php naillab_render_catalog_section('Base', 'baze'); ?>
+  <?php naillab_render_catalog_section('Base', 'base'); ?>
   <?php naillab_render_catalog_section('Topy', 'topy'); ?>
 
   <div class="catalog-more is-hidden">
