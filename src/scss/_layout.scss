@@ -286,6 +286,32 @@ body .cmplz-manage-consent:focus-visible::before {
   color: #000;
 }
 
+// Cookie Policy (EU)
+body.page-id-1555 article#post-1555 {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+body.page-id-1555 article#post-1555 .entry-header,
+body.page-id-1555 article#post-1555 .entry-content,
+body.page-id-1555 article#post-1555 #cmplz-document {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+body.page-id-1555 article#post-1555 #cmplz-document {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+body.page-id-1555 article#post-1555 #cmplz-document .cookies-per-purpose,
+body.page-id-1555 article#post-1555 #cmplz-document .cmplz-service-header > div,
+body.page-id-1555 article#post-1555 #cmplz-document .cmplz-category-header {
+  min-width: 0;
+}
+
 @media (min-width: 768px) {
   .container {
     max-width: 960px;
@@ -341,6 +367,24 @@ body .cmplz-manage-consent:focus-visible::before {
 
   body .cmplz-manage-consent::before {
     font-size: 14px;
+  }
+  body.page .entry-content #cmplz-document {
+    max-width: 100%;
+  }
+
+  body.page .entry-content #cmplz-document p,
+  body.page .entry-content #cmplz-document li {
+    font-size: 14px;
+  }
+
+  body.page .entry-content #cmplz-document th,
+  body.page .entry-content #cmplz-document td {
+    min-width: 120px;
+    padding: 8px 10px;
+  }
+
+  body.page-id-1555 article#post-1555 {
+    padding: 0 24px;
   }
 }
 
