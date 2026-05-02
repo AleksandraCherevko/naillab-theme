@@ -4,9 +4,8 @@
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
-get_header(); ?>
+get_header();
 
-<?php
 function naillab_render_catalog_section($title, $category_slug) {
     $products = new WP_Query([
         'post_type'      => 'product',
@@ -28,20 +27,21 @@ function naillab_render_catalog_section($title, $category_slug) {
 
     wp_reset_postdata();
     ?>
-    <section class="catalog-block container">
-      <h2 class="catalog-title"><?php echo esc_html($title); ?></h2>
-      <div class="catalog-carousel">
-        <button class="catalog-arrow prev" type="button" aria-label="Previous">
+    <section class="naillab-catalog-block container">
+      <h2 class="naillab-catalog-title"><?php echo esc_html($title); ?></h2>
+
+      <div class="naillab-catalog-carousel">
+        <button class="naillab-catalog-arrow naillab-catalog-arrow--prev" type="button" aria-label="Previous">
           <svg class="icon" width="20" height="20" aria-hidden="true">
             <use href="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/symbol-defs.svg#icon-angle-left'); ?>"></use>
           </svg>
         </button>
 
-        <div class="catalog-row">
+        <div class="naillab-catalog-track">
           <?php echo do_shortcode('[products category="' . esc_attr($category_slug) . '" limit="100" columns="8"]'); ?>
         </div>
 
-        <button class="catalog-arrow next" type="button" aria-label="Next">
+        <button class="naillab-catalog-arrow naillab-catalog-arrow--next" type="button" aria-label="Next">
           <svg class="icon" width="20" height="20" aria-hidden="true">
             <use href="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/symbol-defs.svg#icon-angle-right'); ?>"></use>
           </svg>
@@ -51,12 +51,13 @@ function naillab_render_catalog_section($title, $category_slug) {
     <?php
 }
 ?>
- <main class="catalog-page">
+
+<main class="naillab-catalog-page">
   <?php naillab_render_catalog_section('Gel laky', 'gel-laky'); ?>
   <?php naillab_render_catalog_section('Base', 'base'); ?>
   <?php naillab_render_catalog_section('Topy', 'topy'); ?>
 
-  <div class="catalog-more is-hidden">
+  <div class="naillab-catalog-more is-hidden">
     <?php naillab_render_catalog_section('Modeláž nehtů', 'modelaz-nehtu'); ?>
     <?php naillab_render_catalog_section('Design nehtů', 'nail-art-design-nehtu'); ?>
     <?php naillab_render_catalog_section('Horní formy', 'horni-formy-dual-forms'); ?>
@@ -68,10 +69,9 @@ function naillab_render_catalog_section($title, $category_slug) {
     <?php naillab_render_catalog_section('Podology+', 'profesionalni-kosmetika-podology'); ?>
   </div>
 
-  <div class="catalog-actions container">
-    <button class="catalog-more-btn" type="button">Zobrazit více</button>
+  <div class="naillab-catalog-actions container">
+    <button class="naillab-catalog-more-btn" type="button">Zobrazit více</button>
   </div>
 </main>
-
 
 <?php get_footer(); ?>
