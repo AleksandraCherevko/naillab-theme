@@ -1205,6 +1205,151 @@ body
   outline: none;
   box-shadow: none;
 }
+body.home .home-products .woocommerce ul.products,
+body.home .catalog-block--novinky .woocommerce ul.products {
+  align-items: stretch;
+}
+
+body.home .home-products .woocommerce ul.products li.product,
+body.home .catalog-block--novinky .woocommerce ul.products li.product {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+body.home
+  .home-products
+  .woocommerce
+  ul.products
+  li.product
+  .astra-shop-summary-wrap,
+body.home
+  .catalog-block--novinky
+  .woocommerce
+  ul.products
+  li.product
+  .astra-shop-summary-wrap {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+body.home
+  .home-products
+  .woocommerce
+  ul.products
+  li.product
+  .woocommerce-loop-product__title,
+body.home
+  .catalog-block--novinky
+  .woocommerce
+  ul.products
+  li.product
+  .woocommerce-loop-product__title {
+  min-height: 2.6em;
+}
+
+body.home .home-products .woocommerce ul.products li.product .price,
+body.home .catalog-block--novinky .woocommerce ul.products li.product .price {
+  margin-bottom: 4px;
+}
+
+body.home
+  .home-products
+  .woocommerce
+  ul.products
+  li.product
+  .button.add_to_cart_button,
+body.home .home-products .woocommerce ul.products li.product .added_to_cart,
+body.home
+  .catalog-block--novinky
+  .woocommerce
+  ul.products
+  li.product
+  .button.add_to_cart_button,
+body.home
+  .catalog-block--novinky
+  .woocommerce
+  ul.products
+  li.product
+  .added_to_cart {
+  margin-top: auto;
+}
+body.home .home-products .woocommerce ul.products,
+body.home .catalog-block--novinky .woocommerce ul.products {
+  align-items: stretch;
+}
+
+body.home .home-products .woocommerce ul.products li.product,
+body.home .catalog-block--novinky .woocommerce ul.products li.product {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+body.home
+  .home-products
+  .woocommerce
+  ul.products
+  li.product
+  .astra-shop-summary-wrap,
+body.home
+  .catalog-block--novinky
+  .woocommerce
+  ul.products
+  li.product
+  .astra-shop-summary-wrap {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+body.home
+  .home-products
+  .woocommerce
+  ul.products
+  li.product
+  .woocommerce-loop-product__title,
+body.home
+  .catalog-block--novinky
+  .woocommerce
+  ul.products
+  li.product
+  .woocommerce-loop-product__title {
+  min-height: 2.6em;
+}
+
+body.home .home-products .woocommerce ul.products li.product .price,
+body.home .catalog-block--novinky .woocommerce ul.products li.product .price {
+  margin-bottom: 4px;
+}
+
+body.home
+  .home-products
+  .woocommerce
+  ul.products
+  li.product
+  .button.add_to_cart_button,
+body.home .home-products .woocommerce ul.products li.product .added_to_cart,
+body.home
+  .catalog-block--novinky
+  .woocommerce
+  ul.products
+  li.product
+  .button.add_to_cart_button,
+body.home
+  .catalog-block--novinky
+  .woocommerce
+  ul.products
+  li.product
+  .added_to_cart {
+  margin-top: auto;
+}
+body.home .home-products .woocommerce ul.products li.product img,
+body.home .catalog-block--novinky .woocommerce ul.products li.product img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
 
 @media (max-width: 359px) {
   .catalog-block {
